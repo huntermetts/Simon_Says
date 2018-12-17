@@ -1,14 +1,19 @@
 const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
+let invalidLocation = true
 
 for (let k = 0; k < locations.length; k++) {
     const currentLocation = locations[k]
 
     if (currentLocation[0] > 2) {
-        const invalidLocation = true
+        invalidLocation = true
     }
 
     if (invalidLocation) {
         console.log("This location is invalid")
+    }
+
+    if (k === 5){
+    console.log(`There were ${k} invalid locations`)
     }
 }
 
@@ -17,4 +22,3 @@ for (let k = 0; k < locations.length; k++) {
     total number of locations, not the invalid ones. You
     need to fix this somehow.
 */
-console.log(`There were ${k} invalid locations`)
